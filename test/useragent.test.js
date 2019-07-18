@@ -1,0 +1,20 @@
+const mock = require("egg-mock");
+const request = require("supertest");
+describe("test/useragent.test.ts", () => {
+    let app;
+    before(async () => {
+        app = mock.app({
+            baseDir: "apps/useragent"
+        });
+        return app.ready();
+    });
+    after(() => app.close());
+    afterEach(mock.restore);
+    it("should get /", () => {
+        return request(app.callback())
+            .get("/")
+            .expect("hi, useragent; [object Object]")
+            .expect(200);
+    });
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlcmFnZW50LnRlc3QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyYWdlbnQudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLElBQUksR0FBRyxPQUFPLENBQUMsVUFBVSxDQUFDLENBQUE7QUFDaEMsTUFBTSxPQUFPLEdBQUcsT0FBTyxDQUFDLFdBQVcsQ0FBQyxDQUFBO0FBRXBDLFFBQVEsQ0FBQyx3QkFBd0IsRUFBRSxHQUFHLEVBQUU7SUFDcEMsSUFBSSxHQUFRLENBQUE7SUFDWixNQUFNLENBQUMsS0FBSyxJQUFJLEVBQUU7UUFDZCxHQUFHLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQztZQUNYLE9BQU8sRUFBRSxnQkFBZ0I7U0FDNUIsQ0FBQyxDQUFBO1FBRUYsT0FBTyxHQUFHLENBQUMsS0FBSyxFQUFFLENBQUE7SUFDdEIsQ0FBQyxDQUFDLENBQUE7SUFFRixLQUFLLENBQUMsR0FBRyxFQUFFLENBQUMsR0FBRyxDQUFDLEtBQUssRUFBRSxDQUFDLENBQUE7SUFFeEIsU0FBUyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQTtJQUV2QixFQUFFLENBQUMsY0FBYyxFQUFFLEdBQUcsRUFBRTtRQUNwQixPQUFPLE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxFQUFFLENBQUM7YUFDekIsR0FBRyxDQUFDLEdBQUcsQ0FBQzthQUNSLE1BQU0sQ0FBQyxnQ0FBZ0MsQ0FBQzthQUN4QyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUE7SUFDcEIsQ0FBQyxDQUFDLENBQUE7QUFFTixDQUFDLENBQUMsQ0FBQSJ9

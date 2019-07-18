@@ -1,24 +1,20 @@
 {
-  "name": "egg-passport-citi",
-  "version": "0.2.3",
-  "description": "Citi passport plugin for egg",
+  "name": "egg-useragent",
+  "version": "0.0.1",
+  "description": "egg js useragent middleware",
   "eggPlugin": {
-    "name": "passportCiti",
-    "dependencies": [
-      "passport"
-    ]
+    "name": "egg-useragent",
+    "dependencies": []
   },
   "keywords": [
     "egg",
     "eggPlugin",
     "egg-plugin",
-    "passport-citi"
+    "useragent"
   ],
   "dependencies": {
     "debug": "^2.6.1",
-    "egg-passport": "^2.0.1",
-    "passport-citi": "0.2.2",
-    "uuid": "^3.3.2"
+    "koa-useragent-x": "^1.4.0"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.6",
@@ -32,10 +28,9 @@
     "egg-mock": "^3.13.0",
     "egg-ts-helper": "^1.13.0",
     "ts-node": "^8.2.0",
-    "tsc": "^1.20150623.0",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
-    "typescript": "3.3.3333",
+    "typescript": "3.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "egg": {
@@ -66,12 +61,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jeff-Tian/egg-passport-citi"
+    "url": "https://github.com/Jeff-Tian/egg-useragent"
   },
   "bugs": {
-    "url": "https://github.com/Jeff-Tian/egg-passport-citi/issues"
+    "url": "https://github.com/Jeff-Tian/egg-useragent/issues"
   },
-  "homepage": "https://github.com/Jeff-Tian/egg-passport-citi",
+  "homepage": "https://github.com/Jeff-Tian/egg-useragent",
   "author": "jeff.tian@outlook.com",
   "license": "MIT"
 }
