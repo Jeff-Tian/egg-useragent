@@ -1,5 +1,5 @@
 {
-  "name": "egg-useragent",
+  "name": "egg-useragent-ts",
   "version": "0.0.1",
   "description": "egg js useragent middleware",
   "eggPlugin": {
