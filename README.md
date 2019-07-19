@@ -1,6 +1,6 @@
-# egg-useragent
+# egg-useragent-ts
 
-> egg js useragent middleware
+> egg js useragent middleware TypeScript version, based on koa-useragent
 
 [![NPM version][npm-image]][npm-url]
 [![Build Status](https://travis-ci.com/Jeff-Tian/egg-useragent.svg?branch=master)](https://travis-ci.com/Jeff-Tian/egg-useragent)
@@ -30,38 +30,39 @@ Open [https://uniheart.herokuapp.com/](https://uniheart.herokuapp.com/) to see t
 ## Install
 
 ```bash
-$ npm i egg-useragent --save
+$ npm i egg-useragent-ts --save
 ```
 
 ## Usage
 
 ```js
 // {app_root}/config/plugin.[t|j]s
-exports.passportCiti = {
+exports.useragent = {
   enable: true,
-  package: "egg-passport-wechat-ts"
+  package: "egg-useragent-ts"
 };
 ```
 
 ## Configuration
 
+This plugin need no configuration, you just enable it and you can use it by 
 ```js
-// {app_root}/config/config.default.[t|j]s
-exports.passportCiti = {
-  key: "your oauth key",
-  secret: "your oauth secret"
-};
+ctx.userAgent.isWechat
 ```
-
-see [config/config.default.ts](config/config.default.ts) for more detail.
 
 ## Example
 
 <!-- example here -->
-
-## Questions & Suggestions
-
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+https://github.com/Jeff-Tian/alpha/blob/336003aca7199857b24f118c0ced66dc8afbbdea/app/view/index.pug#L12
+```jade
+case ctx.userAgent.isWechat
+    when true
+        a(href="/passport/wechat") Wechat
+    when false
+        a(href="/wechat-dev/qr-code?select=passportWechat", target="_blank", rel="noopener noreferrer") Wechat
+    default
+        a()
+```
 
 ## License
 
